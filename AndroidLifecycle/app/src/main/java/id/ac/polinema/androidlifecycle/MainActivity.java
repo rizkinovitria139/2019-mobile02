@@ -25,7 +25,23 @@ public class MainActivity extends AppCompatActivity {
 		android.widget.Toast.makeText(this, "App on Stop", Toast.LENGTH_SHORT).show();
 	}
 
+	@Override
+	protected  void onRestart(){
+		super.onRestart();
+		android.widget.Toast.makeText(this, "Application on Restart", Toast.LENGTH_SHORT).show();
+	}
 
+	@Override
+	protected void onPause() {
+		super.onPause();
+		Toast.makeText(this, "Application On Pause", Toast.LENGTH_SHORT).show();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		Toast.makeText(this, "Application On Destroy", Toast.LENGTH_SHORT).show();
+	}
 
 
 	// TODO: tambahkan callback onStart() di sini
